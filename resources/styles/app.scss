@@ -1,0 +1,174 @@
+//
+// Grid
+//
+$grid-gutter-width: 1.25rem;
+
+// Bootstrap Sass
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+
+// :root {
+
+//   // Swiper navigation properties
+//   --swiper-navigation-size: 44px;
+//   --swiper-navigation-top-offset: 50%;
+//   --swiper-navigation-sides-offset: 10px;
+//   --swiper-navigation-color: var(--swiper-theme-color);
+// }
+
+// Customs
+@import "variables";
+@import "font";
+
+// Boostrap Core
+@import "~bootstrap/scss/bootstrap";
+
+.blue-to-white-grandient {
+  background: linear-gradient(135deg, #3498db 0%, #f7f7f7 100%);
+}
+
+#home-hero {
+  @include media-breakpoint-up(lg) {
+    height: $home-hero-height;
+  }
+
+  .home-hero-right-side {
+    @include media-breakpoint-up(md) {
+      position: static;
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      width: $home-hero-right-side-width;
+    }
+  }
+}
+
+.swiper {
+  &-cards,
+  &-cards .swiper-slide {
+    min-height: $cards-slide-min-height;
+
+    .swiper-pagination-bullet-active {
+      background-color: $white;
+    }
+  }
+
+  &-testimonial,
+  &-testimonial .swiper-slide {
+    .swiper-pagination-bullet-active {
+      background-color: $white;
+    }
+  }
+
+  &-navigational,
+  &-navigational .swiper-slide {
+    min-height: $navigational-slide-min-height;
+  }
+
+  .member-card {
+    &-content {
+      background: rgba(255, 255, 255, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+      backdrop-filter: blur(12px);
+    }
+  }
+}
+
+.pagination-link {
+  a {
+    text-decoration: none;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-previous {
+    a {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.woocommerce form .form-row.woocommerce-invalid .select2-container,
+.woocommerce form .form-row.woocommerce-invalid input.input-text,
+.woocommerce form .form-row.woocommerce-invalid select {
+  border-color: $danger !important;
+}
+.woocommerce form .form-row.woocommerce-invalid label {
+  color: $danger;
+}
+.woocommerce form .form-row.woocommerce-validated .select2-container,
+.woocommerce form .form-row.woocommerce-validated input.input-text,
+.woocommerce form .form-row.woocommerce-validated select {
+  border-color: $success !important;
+}
+.woocommerce form input:focus,
+.woocommerce form textarea:focus {
+  border-color: $orange !important;
+}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  background-color: $dark-100;
+  color: $white;
+}
+.woocommerce-success {
+  border-color: $success;
+}
+.woocommerce-error {
+  border-color: $danger;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: $dark-100;
+  border-color: $dark-300;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: $white;
+  line-height: 54px;
+}
+.select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true] {
+  color: $dark-300;
+  font-weight: bold;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected] {
+  background-color: $info;
+  color: $white;
+}
+.select2-dropdown {
+  background-color: $dark-100;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border-color: $dark-300;
+  color: $white;
+  background-color: $dark-100;
+}
+.select2-container .select2-selection--single {
+  height: 54px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  margin-top: 10px;
+}
+
+#pills-tab {
+  button.active {
+    color: $orange !important;
+    border-bottom: 1px solid $orange !important;
+  }
+}
+#wpdcom.wpd-dark.wpd-layout-3 .wpd-comment .wpd-comment-footer .wpd-tool-wrap {
+  background-color: transparent;
+}
+
+
+.woocommerce-MyAccount-navigation-link {
+  &.is-active a,
+  &:hover a {
+    background-color: $dark-400;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "require": {
+    "htmlburger/carbon-fields": "^3.3",
+    "htmlburger/carbon-field-number": "^3.0",
+    "kavenegar/php": "^1.2",
+    "firebase/php-jwt": "^6.0",
+    "paragonie/sodium_compat": "^1.17",
+    "nesbot/carbon": "^2.57",
+    "evokelektrique/bonbast": "dev-master"
+  },
+  "config": {
+    "platform-check": false
+  }
+}

@@ -1,0 +1,148 @@
+//
+// Font
+//
+
+$font-family-base: "Inter", sans-serif;
+$font-size-base: 14px !default;
+$font-weight-bolder: 900;
+
+//
+// Headings
+//
+
+$h1-font-size: 20px;
+$h2-font-size: 18px;
+$h3-font-size: 16px;
+$h4-font-size: 14px;
+$h5-font-size: 12px;
+$h6-font-size: 10px;
+
+//
+// XL Headings
+//
+
+$font-size-xl-1: 88px;
+$font-size-xl-2: 64px;
+$font-size-xl-3: 48px;
+$font-size-xl-4: 32px;
+$font-size-xl-5: 28px;
+$font-size-xl-6: 24px;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+
+  xl-1: $font-size-xl-1,
+  xl-2: $font-size-xl-2,
+  xl-3: $font-size-xl-3,
+  xl-4: $font-size-xl-4,
+  xl-5: $font-size-xl-5,
+  xl-6: $font-size-xl-6,
+);
+
+$light-200: #EAECF0;
+$dark-100: #36444f;
+$dark-300: #515557;
+$dark-400: #101828;
+$orange: #f39c12;
+$success-100: #ECFDF3;
+
+// Colors
+$theme-colors: (
+  "primary": #0d6efd,
+  "secondary": #6c757d,
+  "success": #198754,
+  "success-100": $success-100,
+  "warning": #ffc107,
+  "light": #f8f9fa,
+  "light-200": $light-200,
+  "dark": #272e33,
+  "dark-100": $dark-100,
+  "dark-200": #344054,
+  "dark-300": $dark-300,
+  "dark-400": $dark-400,
+  "info": #3498db,
+  "danger": #e74c3c,
+  "white": #ffffff,
+  "grey-100": #f7f7f7,
+  "grey-200": #d0d5dd,
+  "orange": $orange,
+  "orange-100": #ffefd6,
+  "indigo": #53389e,
+  "indigo-100": #7F56D9,
+
+);
+
+//
+// Border radius
+//
+
+$border-radius-sm: 8px;
+$border-radius: 12px;
+$border-radius-lg: 16px;
+$border-radius-xl: 20px;
+$border-radius-pill: 50rem;
+
+
+$utilities: (
+    "rounded": (
+        property: border-radius,
+        class: rounded,
+        values: (
+            null: $border-radius,
+            0: 0,
+            1: $border-radius-sm,
+            2: $border-radius,
+            3: $border-radius-lg,
+            4: $border-radius-xl,
+            circle: 50%,
+            pill: $border-radius-pill,
+        ),
+    ),
+);
+
+// Accordion
+$accordion-padding-y:                     1rem;
+$accordion-padding-x:                     1.25rem;
+$accordion-color:                         $white;
+$accordion-bg:                            transparent;
+$accordion-border-width:                  $border-width;
+$accordion-border-color:                  $light-200;
+$accordion-border-radius:                 $border-radius;
+$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
+
+$accordion-body-padding-y:                $accordion-padding-y;
+$accordion-body-padding-x:                $accordion-padding-x;
+
+$accordion-button-padding-y:              $accordion-padding-y;
+$accordion-button-padding-x:              $accordion-padding-x;
+$accordion-button-color:                  $accordion-color;
+$accordion-button-bg:                     $accordion-bg;
+$accordion-transition:                    $btn-transition, border-radius .15s ease;
+$accordion-button-active-bg:              transparent;
+$accordion-button-active-color:           shade-color($info, 10%);
+
+$accordion-button-focus-border-color:     $white;
+$accordion-button-focus-box-shadow:       none;
+
+$accordion-icon-width:                    1.25rem;
+$accordion-icon-color:                    $accordion-color;
+$accordion-icon-active-color:             $accordion-button-active-color;
+$accordion-icon-transition:               transform .2s ease-in-out;
+$accordion-icon-transform:                rotate(-180deg);
+
+$accordion-button-icon:         url("data:image/svg+xml,<svg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M11 7V15M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+
+// Home page
+$home-hero-height: 720px;
+$home-hero-right-side-width: 720px;
+
+// Slides
+$cards-slide-min-height: 213px;
+$navigational-slide-min-height: 504px;
+$member-cards-content-min-height: 246px;

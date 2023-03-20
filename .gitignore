@@ -1,0 +1,7 @@
+package-lock.json
+vendor/
+TOOD
+dist/
+public/
+node_modules/
+*.zip
