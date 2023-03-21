@@ -193,15 +193,15 @@ get_header();
                         <p class="fw-bold fs-4 mb-4"><?= carbon_get_post_meta(get_the_ID(), "credit_card_bank") ?></p>
                         <div class="d-flex flex-column justify-content-between align-items-center flex-md-row gap-3 mb-2">
                           <p class="m-0 fs-6 fw-bold">
-                          <?= carbon_get_post_meta(get_the_ID(), "credit_card_name") ?>
+                            <?= carbon_get_post_meta(get_the_ID(), "credit_card_name") ?>
                           </p>
                           <p class="m-0 fs-6 fw-bold">
-                          <?= carbon_get_post_meta(get_the_ID(), "credit_card_expire_date") ?>
+                            <?= carbon_get_post_meta(get_the_ID(), "credit_card_expire_date") ?>
                           </p>
                         </div>
 
                         <p class="text-monospace mb-3 fs-5">
-                        <?= carbon_get_post_meta(get_the_ID(), "credit_card_card_number") ?>
+                          <?= carbon_get_post_meta(get_the_ID(), "credit_card_card_number") ?>
                         </p>
 
                         <div class="d-flex flex-column flex-md-row gap-5 justify-content-between fs-5">
@@ -210,7 +210,7 @@ get_header();
                               Limit
                             </p>
                             <p class="d-block mb-1 fw-bold">
-                            <?= carbon_get_post_meta(get_the_ID(), "credit_card_limit") ?>
+                              <?= carbon_get_post_meta(get_the_ID(), "credit_card_limit") ?>
                             </p>
                           </div>
                           <div>
@@ -361,21 +361,21 @@ get_header();
       <!-- Slider main container -->
       <div class="swiper swiper-testimonial pb-5">
         <div class="swiper-wrapper">
-          <?php foreach(carbon_get_theme_option("tcf_testimonials") as $testimonial): ?>
-          <div class="swiper-slide text-center">
-            <p class="fw-bold fs-xl-4 mb-3 pb-3">
-              <?= $testimonial["testimonial_description"] ?>
-            </p>
+          <?php foreach (carbon_get_theme_option("tcf_testimonials") as $testimonial) : ?>
+            <div class="swiper-slide text-center">
+              <p class="fw-bold fs-xl-4 mb-3 pb-3">
+                <?= $testimonial["testimonial_description"] ?>
+              </p>
 
-            <img src="<?= $testimonial["testimonial_image"] ?>" alt="" class="mb-3">
+              <img src="<?= $testimonial["testimonial_image"] ?>" alt="" class="mb-3">
 
-            <p class="fw-bold fs-2 mb-1"><?= $testimonial["testimonial_name"] ?></p>
-            <p class="fs-3 mb-3"><?= $testimonial["testimonial_subject"] ?></p>
+              <p class="fw-bold fs-2 mb-1"><?= $testimonial["testimonial_name"] ?></p>
+              <p class="fs-3 mb-3"><?= $testimonial["testimonial_subject"] ?></p>
 
-            <div class="d-flex justify-content-center">
-              <?= $GLOBALS["tcf"]->cta_generate_stars(intval($testimonial["testimonial_stars"])); ?>
+              <div class="d-flex justify-content-center">
+                <?= $GLOBALS["tcf"]->cta_generate_stars(intval($testimonial["testimonial_stars"])); ?>
+              </div>
             </div>
-          </div>
           <?php endforeach; ?>
         </div>
 

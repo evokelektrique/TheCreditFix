@@ -173,6 +173,7 @@ get_header();
   </div>
 </div>
 
+<!-- Why swtich -->
 <div class="container py-5 my-5">
   <div class="mb-5 pb-3">
     <p class="fw-bold text-orange fs-3 mb-2 pb-1">Why switch?</p>
@@ -191,9 +192,9 @@ get_header();
         </div>
 
         <div class="">
-          <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-          <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-          <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+          <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_one_title") ?></p>
+          <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_one_description") ?></p>
+          <a href="<?= carbon_get_theme_option("switch_feature_one_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
             <span>
               View integration
             </span>
@@ -215,9 +216,9 @@ get_header();
         </div>
 
         <div class="">
-          <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-          <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-          <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+          <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_two_title") ?></p>
+          <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_two_description") ?></p>
+          <a href="<?= carbon_get_theme_option("switch_feature_two_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
             <span>
               View integration
             </span>
@@ -239,9 +240,9 @@ get_header();
         </div>
 
         <div class="">
-          <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-          <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-          <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+          <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_three_title") ?></p>
+          <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_three_description") ?></p>
+          <a href="<?= carbon_get_theme_option("switch_feature_three_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
             <span>
               View integration
             </span>
@@ -263,9 +264,9 @@ get_header();
         </div>
 
         <div class="">
-          <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-          <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-          <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+          <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_four_title") ?></p>
+          <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_four_description") ?></p>
+          <a href="<?= carbon_get_theme_option("switch_feature_four_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
             <span>
               View integration
             </span>
@@ -278,5 +279,6 @@ get_header();
     </div>
   </div>
 </div>
+
 
 <?php get_footer(); ?>

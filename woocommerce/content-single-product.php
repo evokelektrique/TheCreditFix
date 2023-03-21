@@ -197,9 +197,9 @@ if (post_password_required()) {
           </div>
 
           <div class="">
-            <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-            <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-            <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+            <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_one_title") ?></p>
+            <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_one_description") ?></p>
+            <a href="<?= carbon_get_theme_option("switch_feature_one_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
               <span>
                 View integration
               </span>
@@ -221,9 +221,9 @@ if (post_password_required()) {
           </div>
 
           <div class="">
-            <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-            <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-            <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+            <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_two_title") ?></p>
+            <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_two_description") ?></p>
+            <a href="<?= carbon_get_theme_option("switch_feature_two_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
               <span>
                 View integration
               </span>
@@ -245,9 +245,9 @@ if (post_password_required()) {
           </div>
 
           <div class="">
-            <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-            <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-            <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+            <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_three_title") ?></p>
+            <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_three_description") ?></p>
+            <a href="<?= carbon_get_theme_option("switch_feature_three_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
               <span>
                 View integration
               </span>
@@ -269,9 +269,9 @@ if (post_password_required()) {
           </div>
 
           <div class="">
-            <p class="fw-bold fs-1 mb-2">Share team inboxes</p>
-            <p class="mb-3 pb-1 fs-3">Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.</p>
-            <a href="#" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
+            <p class="fw-bold fs-1 mb-2"><?= carbon_get_theme_option("switch_feature_four_title") ?></p>
+            <p class="mb-3 pb-1 fs-3"><?= carbon_get_theme_option("switch_feature_four_description") ?></p>
+            <a href="<?= carbon_get_theme_option("switch_feature_four_link") ?>" class="text-decoration-none text-orange fw-bold fs-3 d-flex align-items-center justify-content-start gap-2">
               <span>
                 View integration
               </span>
@@ -284,6 +284,7 @@ if (post_password_required()) {
       </div>
     </div>
   </div>
+
 </div>
 
 <!-- Testimonial -->
@@ -294,21 +295,21 @@ if (post_password_required()) {
       <!-- Slider main container -->
       <div class="swiper swiper-testimonial pb-5">
         <div class="swiper-wrapper">
-          <?php foreach(carbon_get_theme_option("tcf_testimonials") as $testimonial): ?>
-          <div class="swiper-slide text-center">
-            <p class="fw-bold fs-xl-4 mb-3 pb-3">
-              <?= $testimonial["testimonial_description"] ?>
-            </p>
+          <?php foreach (carbon_get_theme_option("tcf_testimonials") as $testimonial) : ?>
+            <div class="swiper-slide text-center">
+              <p class="fw-bold fs-xl-4 mb-3 pb-3">
+                <?= $testimonial["testimonial_description"] ?>
+              </p>
 
-            <img src="<?= $testimonial["testimonial_image"] ?>" alt="" class="mb-3">
+              <img src="<?= $testimonial["testimonial_image"] ?>" alt="" class="mb-3">
 
-            <p class="fw-bold fs-2 mb-1"><?= $testimonial["testimonial_name"] ?></p>
-            <p class="fs-3 mb-3"><?= $testimonial["testimonial_subject"] ?></p>
+              <p class="fw-bold fs-2 mb-1"><?= $testimonial["testimonial_name"] ?></p>
+              <p class="fs-3 mb-3"><?= $testimonial["testimonial_subject"] ?></p>
 
-            <div class="d-flex justify-content-center">
-              <?= $GLOBALS["tcf"]->cta_generate_stars(intval($testimonial["testimonial_stars"])); ?>
+              <div class="d-flex justify-content-center">
+                <?= $GLOBALS["tcf"]->cta_generate_stars(intval($testimonial["testimonial_stars"])); ?>
+              </div>
             </div>
-          </div>
           <?php endforeach; ?>
         </div>
 
