@@ -178,7 +178,6 @@ if (post_password_required()) {
     </div>
   </div>
 
-
   <!-- Why swtich -->
   <div class="container py-5 my-5">
     <div class="mb-5 pb-3">
@@ -362,7 +361,6 @@ if (post_password_required()) {
   </div>
 </div>
 
-
 <div class="container mb-5 pb-3 text-center">
   <p class="fw-bold mb-3 pb-1 fs-xl-4">Frequently asked questions</p>
   <p class="fs-1 ">Everything you need to know about the product and billing.</p>
@@ -370,36 +368,18 @@ if (post_password_required()) {
 
 <div class="container mb-5 pb-3">
   <div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          Accordion Item #1
-        </button>
-      </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion</div>
+    <?php foreach (carbon_get_theme_option("tcf_faqs") as $key => $faq) : ?>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-heading-<?= $key ?>">
+          <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-<?= $key ?>" aria-expanded="false" aria-controls="flush-collapse-<?= $key ?>">
+            <?= $faq["title"] ?>
+          </button>
+        </h2>
+        <div id="flush-collapse-<?= $key ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading-<?= $key ?>" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body"><?= $faq["description"] ?></div>
+        </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
-        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Accordion Item #2
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion</div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Accordion Item #3
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">Placeholder content for this accordion.</div>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
 </div>
 
@@ -410,13 +390,13 @@ if (post_password_required()) {
 
 <div class="container mb-5 pb-3 text-center">
   <div class="row row-cols-auto gx-lg-5 gy-4 mb-5 pb-3">
-      <?php
-      woocommerce_related_products(array(
-        'posts_per_page' => 4,
-        'columns'        => 4,
-        'orderby'        => 'rand'
-      ));
-      ?>
+    <?php
+    woocommerce_related_products(array(
+      'posts_per_page' => 4,
+      'columns'        => 4,
+      'orderby'        => 'rand'
+    ));
+    ?>
   </div>
 </div>
 
