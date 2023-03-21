@@ -22,7 +22,7 @@ get_header();
         <p class="fw-bold fs-xl-2 mb-4">Smart business <br>credit cards</p>
         <p class="fs-1 mb-5">Powerful, self-serve product and growth analytics<br> to help you convert, engage, and retain more.</p>
 
-        FORM
+        <?= do_shortcode('[wpforms id="352" title="false"]') ?>
       </div>
     </div>
   </div>
@@ -158,7 +158,7 @@ get_header();
       </div>
 
       <div>
-        <a href="<?= get_permalink(wc_get_page_id('shop')) ?>" class="btn btn-info text-white fw-bold fs-3 px-3 py-2">View all cards</a>
+        <a href="<?= get_permalink(wc_get_page_id('shop')) ?>" class="btn btn-info text-white fw-bold fs-3 px-3 py-2 d-none d-lg-block">View all cards</a>
       </div>
     </div>
 
@@ -190,9 +190,9 @@ get_header();
                   <div class="p-3">
                     <div class="p-0">
                       <div class="p-1">
-                        <p class="fw-bold fs-4 mb-4"><?= carbon_get_post_meta(get_the_ID(), "credit_card_bank") ?></p>
-                        <div class="d-flex flex-column justify-content-between align-items-center flex-md-row gap-3 mb-2">
-                          <p class="m-0 fs-6 fw-bold">
+                        <p class="fw-bold fs-4 mb-4 text-capitalize"><?= carbon_get_post_meta(get_the_ID(), "credit_card_bank") ?></p>
+                        <div class="d-flex justify-content-between align-items-center gap-3 mb-2">
+                          <p class="m-0 fs-6 fw-bold text-capitalize">
                             <?= carbon_get_post_meta(get_the_ID(), "credit_card_name") ?>
                           </p>
                           <p class="m-0 fs-6 fw-bold">
@@ -200,11 +200,11 @@ get_header();
                           </p>
                         </div>
 
-                        <p class="text-monospace mb-3 fs-5">
+                        <p class="text-monospace mb-3 fs-5 fw-bold" style="text-align-last: justify;">
                           <?= carbon_get_post_meta(get_the_ID(), "credit_card_card_number") ?>
                         </p>
 
-                        <div class="d-flex flex-column flex-md-row gap-5 justify-content-between fs-5">
+                        <div class="d-flex gap-5 justify-content-between fs-5">
                           <div>
                             <p class="d-block mb-1">
                               Limit
@@ -394,7 +394,7 @@ get_header();
         <p class="fs-1 m-0">Tool and strategies modern teams need to help their companies grow.</p>
       </div>
 
-      <div>
+      <div class="d-none d-lg-block">
         <a href="<?= get_post_permalink(get_option('page_for_posts')) ?>" class="btn btn-indigo text-white fw-bold fs-3 px-3 py-2">View all posts</a>
       </div>
     </div>

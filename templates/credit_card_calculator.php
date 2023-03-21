@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-12 col-lg-3">
-        <label class="form-label" for="time">Time</label>
+        <label class="form-label" for="time">Time (days)</label>
         <input type="text" class="form-control" id="time">
       </div>
 
@@ -26,8 +26,8 @@
 
   <div class="my-4 d-block w-100 bg-dark-100" style="height: 1px;"></div>
 
-  <p class="fw-bold" id="result">
-  It will take <span class="text-orange" id="result-year">10 years and 11 months</span> to payoff the balance. The total interest is <span class="text-orange" id="result-number">$2,574.43</span>.
+  <p class="fw-bold d-none" id="result">
+    It will take <span class="text-orange" id="result-year"></span><span id="result-seperator" class="text-orange d-none">&nbsp;and&nbsp;</span><span class="text-orange" id="result-month">&nbsp;</span>to payoff the balance. The total interest is <span class="text-orange" id="result-number"></span>.
   </p>
 </div>
 <script>
@@ -47,8 +47,24 @@
     const result_months = parseInt((T % 365) / 30);
     const result_number = calcualate_interest(P, R, T)
 
-    document.getElementById("result-year").innerText = `${result_years} years and ${result_months} months`;
-    document.getElementById("result-number").innerText = result_number;
+    document.getElementById("result").classList.remove('d-none');
 
+    if (result_years > 0) {
+      document.getElementById("result-year").innerText = `${result_years} years`;
+    } else {
+      document.getElementById("result-year").innerText = ``;
+    }
+    if ((result_years > 0) && (result_months > 0)) {
+      document.getElementById("result-seperator").classList.remove("d-none");
+    } else {
+      document.getElementById("result-seperator").classList.add("d-none");
+    }
+    if (result_months > 0) {
+      document.getElementById("result-month").innerText = `${result_months} months `;
+    } else {
+      document.getElementById("result-month").innerText = ``;
+    }
+
+    document.getElementById("result-number").innerText = result_number;
   });
 </script>

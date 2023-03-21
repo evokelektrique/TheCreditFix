@@ -39,10 +39,8 @@ get_header();
 </div>
 
 <!-- Hero Image -->
-<div class="position-relative w-100 mb-5 pb-3">
-  <div class="bg-dark-100 container" style="height: 480px;"></div>
-
-  <img src="<?= get_template_directory_uri() ?>/public/images/credit_card_repair.png" alt="Credit Card" class="w-100 h-100 mw-100 position-absolute top-0 start-0">
+<div class="position-relative container mb-5 pb-3">
+  <img src="<?= get_template_directory_uri() ?>/public/images/credit_card_repair.png" alt="Credit Card" class="w-100 h-100 mw-100">
 </div>
 
 <!-- Items -->

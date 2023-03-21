@@ -8,14 +8,14 @@ $is_pricing = is_page_template("templates/pricing.php");
   <div class="bg-dark-100 py-5 <?= ($is_homepage || $is_pricing) ? "mt-5 pt-5 mt-lg-0 pt-lg-0" : "mt-auto" ?> position-relative">
     <?php if ($is_homepage) : ?>
       <div class="container position-absolute top-0 translate-middle start-50">
-        <div class="bg-indigo rounded-3 p-5">
-          <div class="p-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
+        <div class="bg-indigo rounded-3 p-lg-5">
+          <div class="p-lg-3 p-3 py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
             <div>
               <p class="fw-bold fs-xl-4 mb-3">Start your 30-day free trial</p>
               <p class="fs-1 m-0">Join over 4,000+ startups already growing with Untitled.</p>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center flex-column flex-md-row gap-3">
+            <div class="d-flex justify-content-between align-items-center gap-3">
               <a href="<?= carbon_get_theme_option("trial_learn_more_link") ?>" class="btn btn-white text-dark-200 fw-bold fs-3 py-2 px-3">Learn more</a>
               <a href="<?= carbon_get_theme_option("trial_get_started_link") ?>" class="btn btn-indigo-100 text-white fw-bold fs-3 py-2 px-3">Get started</a>
             </div>
@@ -26,14 +26,14 @@ $is_pricing = is_page_template("templates/pricing.php");
 
     <?php if ($is_pricing) : ?>
       <div class="container position-absolute top-0 translate-middle start-50">
-        <div class="bg-info rounded-3 p-5">
-          <div class="p-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
+        <div class="bg-info rounded-3 p-lg-5">
+          <div class="p-lg-3 p-3 py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-4">
             <div>
               <p class="fw-bold fs-xl-4 mb-3">Start to Trade Credit cards</p>
               <p class="fs-1 m-0">Join over 4,000+ people already growing with CreditFix.</p>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center flex-column flex-md-row gap-3">
+            <div class="d-flex justify-content-between align-items-center gap-3">
               <a href="<?= carbon_get_theme_option("trial_learn_more_link") ?>" class="btn btn-white text-dark-200 fw-bold fs-3 py-2 px-3">Learn more</a>
               <a href="<?= carbon_get_theme_option("trial_get_started_link") ?>" class="btn btn-info text-white fw-bold fs-3 py-2 px-3">Get started</a>
             </div>
@@ -47,12 +47,12 @@ $is_pricing = is_page_template("templates/pricing.php");
         <div class="container <?= ($is_homepage || $is_pricing) ? "mt-5 pt-5" : "" ?>">
           <div class="row">
             <div class="col-12 col-lg-3">
-              <a href="<?= site_url() ?>">
-                <img src="<?= get_template_directory_uri() ?>/public/images/full_logo.png" alt="" class="mb-3 pb-3">
+              <a href="<?= site_url() ?>" class="mb-3 pb-3 d-block">
+                <img src="<?= get_template_directory_uri() ?>/public/images/full_logo.png" style="max-height: 32px;" alt="">
               </a>
               <p class="text-light-200 fs-3"><?= bloginfo("description") ?></p>
             </div>
-            <div class="col-12 col-lg-2 offset-lg-2">
+            <div class="col-6 col-lg-2 offset-lg-2">
               <p class="text-grey-200 mb-3 fw-bold fs-4">Product</p>
 
               <?php
@@ -72,7 +72,7 @@ $is_pricing = is_page_template("templates/pricing.php");
               echo $menu_list;
               ?>
             </div>
-            <div class="col-12 col-lg-2">
+            <div class="col-6 col-lg-2">
               <p class="text-grey-200 mb-3 fw-bold fs-4">Product</p>
               <?php
               $theme_location = "footer_navigation_two";
@@ -91,12 +91,9 @@ $is_pricing = is_page_template("templates/pricing.php");
               echo $menu_list;
               ?>
             </div>
-            <div class="col-12 col-lg-3">
+            <div class="col-6 col-lg-3 d-none d-lg-block">
               <p class="fw-bold text-white fs-4 mb-3">Stay up to date</p>
-              <form action="" class="d-flex flex-row gap-3">
-                <input type="text" class="form-control" placeholder="Enter your email">
-                <button class="btn btn-info py-2 px-3 fs-2 fw-bold text-white">Subscribe</button>
-              </form>
+              <?= do_shortcode('[wpforms id="365" title="false"]') ?>
             </div>
           </div>
 
