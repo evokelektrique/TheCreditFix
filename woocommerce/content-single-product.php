@@ -294,65 +294,22 @@ if (post_password_required()) {
       <!-- Slider main container -->
       <div class="swiper swiper-testimonial pb-5">
         <div class="swiper-wrapper">
+          <?php foreach(carbon_get_theme_option("tcf_testimonials") as $testimonial): ?>
           <div class="swiper-slide text-center">
             <p class="fw-bold fs-xl-4 mb-3 pb-3">
-              Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.
+              <?= $testimonial["testimonial_description"] ?>
             </p>
 
-            <img src="<?= get_template_directory_uri() ?>/public/images/avatar.png" alt="" class="mb-3">
+            <img src="<?= $testimonial["testimonial_image"] ?>" alt="" class="mb-3">
 
-            <p class="fw-bold fs-2 mb-1">Kelly Williams</p>
-            <p class="fs-3 mb-3">Head of Design, Layers</p>
-
-            <div class="d-flex justify-content-center">
-              <?= $GLOBALS["tcf"]->cta_generate_stars(5); ?>
-            </div>
-          </div>
-
-          <div class="swiper-slide text-center">
-            <p class="fw-bold fs-xl-4 mb-3 pb-3">
-              Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.
-            </p>
-
-            <img src="<?= get_template_directory_uri() ?>/public/images/avatar.png" alt="" class="mb-3">
-
-            <p class="fw-bold fs-2 mb-1">Kelly Williams</p>
-            <p class="fs-3 mb-3">Head of Design, Layers</p>
+            <p class="fw-bold fs-2 mb-1"><?= $testimonial["testimonial_name"] ?></p>
+            <p class="fs-3 mb-3"><?= $testimonial["testimonial_subject"] ?></p>
 
             <div class="d-flex justify-content-center">
-              <?= $GLOBALS["tcf"]->cta_generate_stars(5); ?>
+              <?= $GLOBALS["tcf"]->cta_generate_stars(intval($testimonial["testimonial_stars"])); ?>
             </div>
           </div>
-
-          <div class="swiper-slide text-center">
-            <p class="fw-bold fs-xl-4 mb-3 pb-3">
-              Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.
-            </p>
-
-            <img src="<?= get_template_directory_uri() ?>/public/images/avatar.png" alt="" class="mb-3">
-
-            <p class="fw-bold fs-2 mb-1">Kelly Williams</p>
-            <p class="fs-3 mb-3">Head of Design, Layers</p>
-
-            <div class="d-flex justify-content-center">
-              <?= $GLOBALS["tcf"]->cta_generate_stars(5); ?>
-            </div>
-          </div>
-
-          <div class="swiper-slide text-center">
-            <p class="fw-bold fs-xl-4 mb-3 pb-3">
-              Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.
-            </p>
-
-            <img src="<?= get_template_directory_uri() ?>/public/images/avatar.png" alt="" class="mb-3">
-
-            <p class="fw-bold fs-2 mb-1">Kelly Williams</p>
-            <p class="fs-3 mb-3">Head of Design, Layers</p>
-
-            <div class="d-flex justify-content-center">
-              <?= $GLOBALS["tcf"]->cta_generate_stars(5); ?>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
 
         <div class="swiper-pagination"></div>

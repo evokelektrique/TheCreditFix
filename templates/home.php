@@ -385,7 +385,6 @@ get_header();
   </div>
 </div>
 
-
 <div class="container py-5 my-5">
   <div class="mb-5 pb-3">
     <div class="d-flex align-items-center justify-content-between flex-md-row flex-column gap-3">
