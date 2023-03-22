@@ -16,8 +16,8 @@ get_header();
     <p class="fw-bold mb-3 pb-1 fs-xl-4">Resources and insights</p>
     <p class="fs-1 mb-4 pb-3">The latest industry news, interviews, technologies, and resources.</p>
 
-    <div class="">
-      FORM
+    <div class="d-flex justify-content-center">
+      <?php $wpform_id = carbon_get_theme_option("get_started_form_id"); echo do_shortcode('[wpforms id="'. $wpform_id .'" title="false"]') ?>
     </div>
   </div>
 

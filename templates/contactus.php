@@ -55,6 +55,20 @@ get_header();
       <a href="tel:<?= carbon_get_theme_option("contact_us_phone") ?>" class="text-decoration-none text-orange fw-bold fs-3"><?= carbon_get_theme_option("contact_us_phone") ?></a>
     </div>
   </div>
+
+  <div class="container mw-100 py-5 my-5">
+    <div class="mb-5 pb-3 text-center">
+      <p class="mb-2 pb-1 text-orange fw-bold fs-xl-6">Contact us</p>
+      <p class="fw-bold fs-xl-4 mb-3 pb-1">Get in touch</p>
+      <p class="fs-1 m-0">We’d love to hear from you. Please fill out this form.</p>
+    </div>
+
+    <div class="mw-100 mx-auto" style="width: 480px">
+      <?php $wpform_id = carbon_get_theme_option("contact_us_form_id");
+      echo do_shortcode('[wpforms id="' . $wpform_id . '" title="false"]') ?>
+    </div>
+
+  </div>
 </div>
 
 <?php get_footer(); ?>

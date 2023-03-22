@@ -22,7 +22,8 @@ get_header();
         <p class="fw-bold fs-xl-2 mb-4">Smart business <br>credit cards</p>
         <p class="fs-1 mb-5">Powerful, self-serve product and growth analytics<br> to help you convert, engage, and retain more.</p>
 
-        <?= do_shortcode('[wpforms id="352" title="false"]') ?>
+        <?php $wpform_id = carbon_get_theme_option("get_started_form_id");
+        echo do_shortcode('[wpforms id="' . $wpform_id . '" title="false"]') ?>
       </div>
     </div>
   </div>

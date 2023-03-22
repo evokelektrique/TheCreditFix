@@ -93,7 +93,8 @@ $is_pricing = is_page_template("templates/pricing.php");
             </div>
             <div class="col-6 col-lg-3 d-none d-lg-block">
               <p class="fw-bold text-white fs-4 mb-3">Stay up to date</p>
-              <?= do_shortcode('[wpforms id="365" title="false"]') ?>
+              <?php $wpform_id = carbon_get_theme_option("get_started_form_id");
+              echo do_shortcode('[wpforms id="' . $wpform_id . '" title="false"]') ?>
             </div>
           </div>
 
@@ -124,14 +125,16 @@ $is_pricing = is_page_template("templates/pricing.php");
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/641894794247f20fefe6fc48/1gs007ulu';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
+  var Tawk_API = Tawk_API || {},
+    Tawk_LoadStart = new Date();
+  (function() {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/641894794247f20fefe6fc48/1gs007ulu';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+  })();
 </script>
 <!--End of Tawk.to Script-->

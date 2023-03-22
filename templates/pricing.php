@@ -336,7 +336,7 @@ get_header();
       <p class="fw-bold fs-1 mb-2">Still have questions?</p>
       <p class="fs-2 mb-3 pb-3">Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
 
-      <a href="#" class="btn btn-info text-white p-3 fw-bold fs-3">Get in touch</a>
+      <a href="<?= carbon_get_theme_option("get_in_touch_link") ?>" class="btn btn-info text-white p-3 fw-bold fs-3">Get in touch</a>
     </div>
   </div>
 </div>

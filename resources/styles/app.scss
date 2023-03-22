@@ -185,25 +185,9 @@ $grid-gutter-width: 1.25rem;
   }
 }
 
-// .custom-from-wrapper {
-//   form {
-//     display: flex;
-//     flex-wrap: wrap;
-//   }
-
-//   .custom-from-input {
-//     width: 100% !important;
-
-//     input {
-//       width: 100% !important;
-//       height: 48px !important;
-//     }
-//   }
-// }
-
 .custom-from-wrapper form {
-  align-items: end;
   display: flex !important;
+  align-items: flex-end;
 }
 .custom-from-input {
   padding: 0 !important;
@@ -233,8 +217,9 @@ $grid-gutter-width: 1.25rem;
   cursor: pointer !important;
 }
 @media screen and (max-width: 570px) {
-  .custom-from-wrapper {
+  .custom-from-wrapper form {
     flex-direction: column !important;
+    align-items: normal !important;
     width: 100% !important;
   }
   .custom-from-wrapper .wpforms-field-medium {
@@ -246,4 +231,7 @@ $grid-gutter-width: 1.25rem;
   .custom-from-wrapper .wpforms-submit {
     width: 100% !important;
   }
+}
+.iti__country-name {
+  color: $dark;
 }

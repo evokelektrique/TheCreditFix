@@ -63,8 +63,8 @@ get_header();
       <p class="fs-1 mb-3 pb-3">Join over 4,000+ startups already growing with Untitled.</p>
 
       <div class="d-inline-flex flex-column flex-md-row gap-3">
-        <button class="btn btn-white fw-bold p-3">Learn more</button>
-        <button class="btn btn-info fw-bold text-white p-3">Get started</button>
+        <a href="<?= carbon_get_theme_option("trial_learn_more_link") ?>" class="btn btn-white fw-bold p-3">Learn more</a>
+        <a href="<?= carbon_get_theme_option("trial_get_started_link") ?>" class="btn btn-info fw-bold text-white p-3">Get started</a>
       </div>
     </div>
   </div>
